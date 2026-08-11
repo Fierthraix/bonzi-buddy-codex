@@ -1,62 +1,76 @@
 # Bonzi Buddy for Codex
 
-An unofficial, fan-made Bonzi Buddy pet for the Codex desktop app. He is a cheerful purple gorilla with expressive eyes, a friendly smile, a banana, nine standard animation states, and a complete 16-direction look loop.
+Unofficial, fan-made Bonzi Buddy pets for the Codex desktop app. Both editions include all nine standard animation states and a complete 16-direction look loop.
 
 <p align="center">
-  <img src="assets/bonzi-buddy-reference.png" alt="Bonzi Buddy holding a banana and a globe" width="520">
+  <img src="assets/bonzi-buddy-reference.png" alt="Original Bonzi Buddy reference holding a banana and a globe" width="520">
 </p>
+
+## Choose your Bonzi
+
+### Globe Edition (recommended)
+
+The Globe Edition adds a special working animation in which Bonzi holds and spins a vivid blue-and-green globe. The continents rotate across six frames, the globe stays attached to its stick, and the banana is absent during this animation.
+
+<p align="center">
+  <img src="assets/bonzi-buddy-globe-working.gif" alt="Bonzi Buddy spinning a blue and green globe" width="240">
+</p>
+
+Installable folder: [`bonzi-buddy-globe/`](bonzi-buddy-globe)
+
+### Classic Edition
+
+The original release keeps Bonzi's banana-focused animation set.
+
+Installable folder: [`bonzi-buddy/`](bonzi-buddy)
 
 ## Install
 
-This repository contains the complete pet in [`bonzi-buddy/`](bonzi-buddy):
+Each pet is self-contained:
 
 ```text
-bonzi-buddy/
+bonzi-buddy-globe/
 ├── pet.json
 └── spritesheet.webp
 ```
 
 ### macOS and Linux
 
-Clone or download this repository, open a terminal in its directory, and run:
+Clone or download this repository, open a terminal in its directory, and install the recommended Globe Edition:
 
 ```bash
 PET_ROOT="${CODEX_HOME:-$HOME/.codex}/pets"
-mkdir -p "$PET_ROOT/bonzi-buddy"
-cp bonzi-buddy/pet.json bonzi-buddy/spritesheet.webp "$PET_ROOT/bonzi-buddy/"
+mkdir -p "$PET_ROOT/bonzi-buddy-globe"
+cp bonzi-buddy-globe/pet.json bonzi-buddy-globe/spritesheet.webp "$PET_ROOT/bonzi-buddy-globe/"
 ```
+
+To install the Classic Edition instead, replace `bonzi-buddy-globe` with `bonzi-buddy` in all three places.
 
 ### Windows PowerShell
 
-Clone or download this repository, open PowerShell in its directory, and run:
-
 ```powershell
 $codexHome = if ($env:CODEX_HOME) { $env:CODEX_HOME } else { Join-Path $HOME ".codex" }
-$petDir = Join-Path $codexHome "pets/bonzi-buddy"
+$petDir = Join-Path $codexHome "pets/bonzi-buddy-globe"
 New-Item -ItemType Directory -Force -Path $petDir | Out-Null
-Copy-Item .\bonzi-buddy\pet.json, .\bonzi-buddy\spritesheet.webp -Destination $petDir -Force
+Copy-Item .\bonzi-buddy-globe\pet.json, .\bonzi-buddy-globe\spritesheet.webp -Destination $petDir -Force
 ```
 
-Restart Codex after installation. Bonzi Buddy should then be available wherever your Codex build exposes custom pet selection.
+Restart Codex after installation. The pet should then be available wherever your Codex build exposes custom pet selection.
 
-## Install from a ZIP
+## Share or install from a ZIP
 
-If someone sends you only the `bonzi-buddy` folder as a ZIP, extract it so the final layout is:
+You can send someone either complete pet folder as a ZIP. They only need to extract it under their Codex pets directory so the final layout is:
 
 ```text
-${CODEX_HOME:-~/.codex}/pets/bonzi-buddy/pet.json
-${CODEX_HOME:-~/.codex}/pets/bonzi-buddy/spritesheet.webp
+${CODEX_HOME:-~/.codex}/pets/bonzi-buddy-globe/pet.json
+${CODEX_HOME:-~/.codex}/pets/bonzi-buddy-globe/spritesheet.webp
 ```
 
-The folder name and both files must be preserved. QA artifacts and source images are not required for installation.
+The folder name and both files must be preserved. Source images and QA artifacts are not needed.
 
 ## Uninstall
 
-Remove the installed pet folder, then restart Codex:
-
-```bash
-rm -rf "${CODEX_HOME:-$HOME/.codex}/pets/bonzi-buddy"
-```
+Remove the installed `bonzi-buddy-globe` or `bonzi-buddy` folder from `${CODEX_HOME:-$HOME/.codex}/pets`, then restart Codex.
 
 ## Package details
 
