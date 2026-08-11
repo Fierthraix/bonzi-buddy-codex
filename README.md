@@ -10,7 +10,7 @@ Unofficial, fan-made Bonzi Buddy pets for the Codex desktop app. Both editions i
 
 ### Globe Edition (recommended)
 
-The Globe Edition adds a special working animation in which Bonzi holds and spins a vivid blue-and-green globe. The continents rotate across six frames, the globe stays attached to its stick, and the banana is absent during this animation.
+The rebuilt Globe Edition keeps Bonzi large and consistently scaled while he carries a compact blue-and-green globe in every animation and look direction. The globe spins while he works, with the continents rotating across six frames. His banana appears occasionally—only while idle, jumping, or waiting—so the globe remains his main companion.
 
 <p align="center">
   <img src="assets/bonzi-buddy-globe-working.gif" alt="Bonzi Buddy spinning a blue and green globe" width="240">
